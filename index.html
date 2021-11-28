@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bhogi7589.github.io/bs4-helper/bs4-helper.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://bhogi7589.github.io/bs4-helper/bs4-helper.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="index.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="theme-dark">
+        <button id="theme-switch" class="btn btn-light fixed-top-right"></button>
+        <div class="page-header">
+            <h1 class="heading display-4">Voice Selfie App</h1>
+        </div>
+        <div class="container">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="text" readonly>
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" onclick="start()"><span class="fa fa-microphone"></span></button>
+                </div>
+            </div>
+            <h4>Webcam:</h4>
+            <div id="camera" class="mx-auto mb-3"></div>
+            <div class="d-none" id="parent">
+                <h4>Your Selfie:</h4>
+                <img src="" alt="Selfie" id="selfie" class="img-responsive rounded pb-3 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12"><br>
+                <a id="download" href="" download="Selfie" class="btn btn-primary"><span class="fa fa-download"></span> Download Your Selfie</a>    
+            </div>
+        </div>
+    </body>
+</html>
