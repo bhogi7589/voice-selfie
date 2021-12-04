@@ -30,7 +30,37 @@ function speak(){
     window.setTimeout(snap, 5000);
 }
 
+function check(){
+    var rbs = document.getElementById("group").querySelectorAll('input[name="format"]');
+    for (var rb of rbs){
+        if (rb.checked){
+            return rb.value;
+        }
+    }
+}
+
+function set(){
+    var format = check();
+    if (format == "png"){
+        Webcam.set({
+            width: 350,
+            height: 250,
+            image_format: "png",
+            png_quality: 90
+        });    
+    }
+    else {
+        Webcam.set({
+            width: 350,
+            height: 250,
+            image_format: "jpeg",
+            jpeg_quality: 90
+        });    
+    }
+}
+
 function snap(){
+    set();
     Webcam.snap(function(url){
         document.getElementById("selfie").src = url;
         var link = document.getElementById("download");
